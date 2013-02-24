@@ -57,6 +57,10 @@ template "#{node[:release_dir]}/lib/tvd-#{node[:tvd][:name]}.rb" do
   source "tvdinner.rb.erb"
 end
 
+directory "#{node[:release_dir]}/lib/tvd-#{node[:tvd][:name]}" do
+  mode 00755
+end
+
 template "#{node[:release_dir]}/lib/tvd-#{node[:tvd][:name]}/version.rb" do
   mode 00644
   source "version.rb.erb"
