@@ -34,11 +34,17 @@ template "#{node[:release_dir]}/.gitignore" do
          /crash.log /output)})
 end
 
-%w(VERSION NOTICE README.md Gemfile).each do |f|
+%w(NOTICE README.md Gemfile).each do |f|
   template "#{node[:release_dir]}/#{f}" do
     mode 00644
     source "#{f}.erb"
   end
+end
+
+template "#{node[:release_dir]}/VERSION" do
+  mode 00644
+  source "VERSION.erb"
+  not_if { File.exists? "#{node[:release_dir]}/VERSION" }
 end
 
 cookbook_file "#{node[:release_dir]}/LICENSE" do
