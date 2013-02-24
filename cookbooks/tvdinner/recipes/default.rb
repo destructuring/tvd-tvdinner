@@ -81,10 +81,15 @@ end
   end
 end
 
-remote_directory "#{node[:release_dir]}/libexec" do
-  source "jason"
+directory "#{node[:release_dir]}/libexec" do
   mode 00755
-  files_mode 00644
+end
+
+%w(_shflags _log4sh _jason _bump).each do |f|
+  cookbook_file "#{node[:release_dir]}/libexec/#{f}" do
+    source "jason/#{f}"
+    mode 00644
+  end
 end
 
 remote_directory "#{node[:release_dir]}/libexec" do
