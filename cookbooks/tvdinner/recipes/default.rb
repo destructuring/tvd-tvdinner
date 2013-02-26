@@ -102,3 +102,9 @@ remote_directory "#{node[:release_dir]}/libexec" do
   source "jasonx"
   files_mode 00755
 end
+
+cookbook_file "#{node[:release_dir]}/Makefile" do
+  mode 00644
+  source "Makefile"
+end
+
