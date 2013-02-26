@@ -2,4 +2,3 @@
 remotes:
   primary: git@github.com:destructuring/tvd-tvdinner
   secondary: git@bitbucket.org:destructuring/tvd-tvdinner
-  rb: https://github.com/destructuring/rb-helper
