@@ -1,2 +1,2 @@
-node.default[:release_dir] = Dir.pwd
-node.default[:project_dir] = Dir.pwd
+node.default[:release_dir] = ENV['RELEASE_DIR']
+node.default[:project_dir] = ENV['PROJECT_DIR']
