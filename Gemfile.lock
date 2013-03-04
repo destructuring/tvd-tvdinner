@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    tvd-tvdinner (0.0.8)
-      microwave
+    tvd-tvdinner (0.0.9)
+      chef
 
 GEM
   remote: https://rubygems.org/
@@ -48,20 +48,6 @@ GEM
     ipaddress (0.8.0)
     json (1.7.7)
     method_source (0.7.1)
-    microwave (11.400.7)
-      erubis
-      highline (>= 1.6.9)
-      json (>= 1.4.4, <= 1.7.7)
-      mixlib-authentication (>= 1.3.0)
-      mixlib-cli (~> 1.3.0)
-      mixlib-config (>= 1.1.2)
-      mixlib-log (>= 1.3.0)
-      mixlib-shellout
-      net-ssh (~> 2.6)
-      net-ssh-multi (~> 1.1.0)
-      ohai (>= 0.6.0)
-      rest-client (>= 1.0.4, < 1.7.0)
-      yajl-ruby (~> 1.1)
     mime-types (1.21)
     minitest (4.6.1)
     minitest-chef-handler (0.6.7)
