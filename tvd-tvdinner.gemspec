@@ -5,7 +5,7 @@ require "tvd-tvdinner/version"
 
 Gem::Specification.new do |s|
   s.name        = "tvd-tvdinner"
-  s.version     = ENV['EDIT_tvd_vagrant'] ? "#{TVDinner::TVDinner::VERSION}.rc#{%x(git log --max-count=1 --pretty=format:%ct)}" : TVDinner::TVDinner::VERSION
+  s.version     = ENV['EDIT_tvdinner'] ? "#{TVDinner::TVDinner::VERSION}.rc#{%x(git log --max-count=1 --pretty=format:%ct)}" : TVDinner::TVDinner::VERSION
   s.homepage    = "http://destructuring.org/tvd-tvdinner"
   s.license     = "Apache 2.0"
 

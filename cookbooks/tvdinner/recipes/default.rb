@@ -65,10 +65,8 @@ cookbook_file "#{node[:release_dir]}/LICENSE" do
   source "LICENSE"
 end
 
-[ "lib", "lib/#{node[:tvd][:name]}" ].each do |d|
-  directory "#{node[:release_dir]}/#{d}" do
-    mode 00755
-  end
+directory "#{node[:release_dir]}/lib/#{node[:tvd][:name]}" do
+  mode 00755
 end
 
 template "#{node[:release_dir]}/lib/tvd-#{node[:tvd][:name]}.rb" do
