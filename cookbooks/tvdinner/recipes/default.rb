@@ -1,4 +1,4 @@
-include_recipe "microwave"
+include_recipe "tvdinner::microwave"
 
 %w(spec tasks).each do |d|
   directory "#{node[:release_dir]}/#{d}" do
