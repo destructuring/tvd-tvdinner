@@ -5,7 +5,7 @@ require "tvd-tvdinner/version"
 
 Gem::Specification.new do |s|
   s.name        = "tvd-tvdinner"
-  s.version     = TVDinner::TVDinner::VERSION
+  s.version     = ENV['EDIT_tvd_vagrant'] ? "#{TVDinner::TVDinner::VERSION}.rc#{%x(git log --max-count=1 --pretty=format:%ct)}" : TVDinner::TVDinner::VERSION
   s.homepage    = "http://destructuring.org/tvd-tvdinner"
   s.license     = "Apache 2.0"
 
@@ -19,10 +19,10 @@ Gem::Specification.new do |s|
 
   s.require_path = "lib"
 
-  s.add_dependency "chef"
+  s.add_dependency "tvd-tvdinner"
 
   s.author      = "Tom Bombadil"
   s.email       = "amanibhavam@destructuring.org"
-  s.summary     = "Generates scaffolding for a tvdinner gem"
-  s.description = "Generates scaffolding for a tvdinner gem"
+  s.summary     = "Generates a tvdinner project"
+  s.description = "Generrates a tvdinner project"
 end

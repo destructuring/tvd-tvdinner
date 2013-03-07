@@ -55,9 +55,9 @@ directory "#{node[:release_dir]}/lib" do
   mode 00755
 end
 
-template "#{node[:release_dir]}/lib/development.rb" do
+cookbook_file "#{node[:release_dir]}/lib/development.rb" do
   mode 00644
-  source "development.erb"
+  source "development.rb"
 end
 
 cookbook_file "#{node[:release_dir]}/LICENSE" do
@@ -114,6 +114,11 @@ end
 remote_directory "#{node[:release_dir]}/libexec" do
   source "jasonx"
   files_mode 00755
+end
+
+cookbook_file "#{node[:release_dir]}/bin/cook" do
+  mode 00755
+  source "cook"
 end
 
 cookbook_file "#{node[:release_dir]}/Makefile" do
