@@ -31,7 +31,7 @@ template "#{node[:release_dir]}/.gitignore" do
   variables({
     :ignore => 
       %w(/.bundle/ /vendor/bundle/ /*.gem
-         /crash.log /output)})
+         /crash.log /output /git)})
 end
 
 %w(NOTICE README.md Gemfile).each do |f|
@@ -45,6 +45,19 @@ template "#{node[:release_dir]}/VERSION" do
   mode 00644
   source "VERSION.erb"
   not_if { File.exists? "#{node[:release_dir]}/VERSION" }
+end
+
+directory "#{node[:release_dir]}/git" do
+  mode 00755
+end
+
+directory "#{node[:release_dir]}/lib" do
+  mode 00755
+end
+
+template "#{node[:release_dir]}/lib/development.rb" do
+  mode 00644
+  source "development.erb"
 end
 
 cookbook_file "#{node[:release_dir]}/LICENSE" do
