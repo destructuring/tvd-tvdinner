@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gemspec
 
-require "./lib/development.rb"
+require "#{File.expand_path("..", __FILE__)}/lib/development.rb"
 
 gem "tvd-tvdinner" unless File.exists?(File.expand_path("../tvd-tvdinner.gemspec", __FILE__))
 gem "chefspec"
