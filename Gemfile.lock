@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tvd-tvdinner (0.0.24)
+    tvd-tvdinner (0.0.25)
       chef
 
 GEM
