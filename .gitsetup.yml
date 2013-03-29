@@ -2,3 +2,4 @@
 remotes:
   primary: git@github.com:destructuring/tvd-tvdinner
   secondary: git@bitbucket.org:destructuring/tvd-tvdinner
+  sh: https://github.com/destructuring/jason
