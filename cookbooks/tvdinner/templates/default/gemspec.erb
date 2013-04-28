@@ -7,7 +7,11 @@ Gem::Specification.new do |s|
   s.name        = "tvd-<%= node[:tvd][:name] %>"
   s.version     = ENV['EDIT_<%= node[:tvd][:name].gsub(/[-]/,"_") %>'] ? "#{TVDinner::<%= node[:tvd][:class] %>::VERSION}.rc#{%x(git log --max-count=1 --pretty=format:%ct)}" : TVDinner::<%= node[:tvd][:class] %>::VERSION
   s.homepage    = "<%= node[:tvd][:homepage] %>"
-  s.license     = "Apache 2.0"
+  s.license     = "<%= node[:tvd][:license] %>"
+  s.author      = "<%= node[:tvd][:author] %>"
+  s.email       = "<%= node[:tvd][:email] %>"
+  s.summary     = "<%= node[:tvd][:summary] %>"
+  s.description = "<%= node[:tvd][:description] %>"
 
   s.executables  = []
   s.test_files   = `git ls-files -- {spec,tasks}/*`.split("\n")
@@ -20,9 +24,4 @@ Gem::Specification.new do |s|
   s.require_path = "lib"
 
   s.add_dependency "tvd-tvdinner"
-
-  s.author      = "<%= node[:tvd][:author] %>"
-  s.email       = "<%= node[:tvd][:email] %>"
-  s.summary     = "<%= node[:tvd][:summary] %>"
-  s.description = "<%= node[:tvd][:description] %>"
 end

@@ -5,11 +5,12 @@
   "tvd": {
     "author": "Tom Bombadil",
     "class": "TVDinner",
-    "description": "Generrates a tvdinner project",
+    "description": "Generates a tvdinner project",
     "email": "amanibhavam@destructuring.org",
     "git_url": "https://github.com/destructuring/tvd-tvdinner",
     "homepage": "http://destructuring.org/tvd-tvdinner",
     "name": "tvdinner",
-    "summary": "Generates a tvdinner project"
+    "summary": "Generates a tvdinner project",
+    "license": "Apache 2.0"
   }
 }
